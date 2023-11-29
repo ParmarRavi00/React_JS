@@ -1,0 +1,300 @@
+*
+{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.main
+{
+    background-color: #003B95;
+}
+
+      /* --------------------Navnar---------------------- */
+
+nav
+{
+    width: 80%;
+    margin: auto;
+}
+
+        /* -----------Upper Navbar------------- */
+
+.upperNav
+{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    padding: 15px 0px 5px;
+}
+
+.logo
+{
+    width: 55%;
+}
+
+.flag
+{
+    width: 15%;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+}
+
+.upperNavFlag
+{
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+}
+
+.flag img
+{
+    border-radius: 50%;
+    margin: 0px 22px;
+}
+
+.quastionMark{
+    fill: white;
+}
+
+.register
+{
+    width: 30%;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-around;
+    line-height: 22px;
+}
+
+.register button
+{
+    font-size: 10px;
+    padding: 0px 12px;
+    border: none;
+    border-radius: 3px;
+    color: #003B95;
+}
+
+        /* -----------Bottom Navbar------------- */
+
+.bottomNav
+{
+position: relative;
+}
+
+.bottomNav ul li
+{
+     list-style: none;
+     display: inline-block;
+     color: white;
+     font-size: 1.2lvw;
+     padding: 0lvw 1lvw;
+}
+
+.bottomNav ul li:first-child
+{
+    border: 1px solid white;
+    padding: 0.5lvw 1lvw;
+    border-radius: 50px;
+}
+
+.svgImg
+{
+    fill: white;
+    width: 1.5lvw;
+    height: 1.5lvw;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+
+.navbarContent
+{
+    padding: 6.5lvw 0lvw;
+    color: white;
+}
+
+.navbarContent h2
+{
+    font-size: 3.5lvw;
+}
+
+.navbarContent p
+{
+    font-size: 1.8lvw;
+}
+
+        /* -----------Sidual Bar------------- */
+
+.sidualBar
+{
+    width: 100%;
+    height: auto;
+    background-color: #ffb700;
+    border-radius: 5px;
+    padding: 0.5lvw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: absolute;
+    top: 90%;
+    left: 0%;
+}
+
+.serchBar
+{
+    width: 30%;
+    height: auto;
+    padding: 0.5lvw 0.6lvw 0.7lvw;
+    border: 1px solid red;
+    background-color: white;
+    border-radius: 5px;
+    position: relative;
+}
+
+.serchBar input
+{
+    height: 110%;
+    width: 100%;
+    font-size: 1.5lvw;
+    border: 1.5px solid transparent;
+    border-radius: 5px;
+    outline: none;
+    vertical-align: middle;
+    padding-left: 3lvw;
+}
+
+.serchBar input:focus
+{
+    border: 1.5px solid #006CE4;
+}
+
+.serchBar input::placeholder
+{
+    font-size: 1lvw;
+    color: black;
+    letter-spacing: 1px;
+}
+
+.sidualBar .serchBtn
+{
+    width: 9%;
+}
+
+.serchBtn button
+{
+    height: 100%;
+    width: 100%;
+    background-color: #006CE4;
+    font-size: 1.4lvw;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.serchBtn button:hover
+{
+    background-color: #003B95;
+}
+
+.inpSvg
+{
+    height: 1.3lvw;
+    width: 1.3lvw;
+    position: absolute;
+    top: 32%;
+    left: 5%;
+}
+
+@media(max-width: 1080px){
+
+nav{
+    width: 90%;
+}
+
+}
+
+@media(max-width: 920px){
+
+nav{
+    width: 95%;
+}
+
+.flag{
+   display: none;
+}
+
+.register{
+    width: 35%;
+}
+
+}
+
+@media(max-width: 740px){
+    
+    .logo{
+        width: 100%;
+    }
+
+    .register{
+        display: none;
+    }
+
+    .serchBar
+    {
+        padding: 0lvw 0.6lvw 0.7lvw;
+    }
+
+    .inpSvg
+    {
+        top: 40%;
+    }
+}
+
+@media(max-width: 628px){
+
+    .sidualBar{
+        padding-bottom: 1.5lvw;
+    }
+
+    .serchBar{
+        width: 100%;
+        padding: 0.2lvw 0.6lvw 0.9lvw;
+        margin-bottom: 3px;
+    }
+
+    .serchBar input{
+        height: 100%;
+    }
+
+    .serchBar input::placeholder
+    {
+        font-size: 1.5lvw;
+    }
+
+    .sidualBar .serchBtn{
+        width: 100%;
+    }
+
+    .inpSvg
+    {
+        left: 2%;
+    }
+
+
+    @media(max-width: 460px){
+
+    .sidualBar{
+        padding-bottom: 2.5lvw;
+    }
+
+    .serchBar{
+        padding: 0.2lvw 0.6lvw 01.5lvw;
+        margin-bottom: 3px;
+    }
+
+    }
+}
