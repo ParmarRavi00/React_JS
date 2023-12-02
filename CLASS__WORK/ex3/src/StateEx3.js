@@ -3,7 +3,6 @@ import { useState } from "react"
 export default function MyLikes()
 {
 
-
     const [like,setLike] = useState(true);
 
     function handleLikes(e)
@@ -11,11 +10,9 @@ export default function MyLikes()
         setLike(e.target.checked)
     }
 
-
     return(
         <>
-        
-        
+          
         <input
 
         type="checkbox"

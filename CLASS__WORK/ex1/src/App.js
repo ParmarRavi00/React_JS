@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import PropTypes from "prop-types";
@@ -6,8 +5,6 @@ import TestEvent from "./Events";
 import TestEvent1 from "./Events"
 
 // console.log(any);
-
-
 
 function App() {
   return (

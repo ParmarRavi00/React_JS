@@ -1,18 +1,17 @@
 
 
-export const reducerFun = (state=11,action)=>{
+export const reducerFun = (state = 0, action) => {
 
-    switch(action.type)
-    {
+    switch (action.type) {
 
         case "increment":
-            return state+1;
+            return state + 1;
 
-            case "decrement":
-                return state-1;
+        case "decrement":
+            return state - 1;
 
-                default: 
-                 return state;
+        default:
+            return state;
 
     }
 
