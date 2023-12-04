@@ -1,0 +1,18 @@
+{
+  "employee": [
+    {
+      "id": 21,
+      "name": "Ravirajsinh",
+      "email": "raviraj@gamil.com",
+      "phone": "7894561230",
+      "isActive": true
+    },
+    {
+      "id": 22,
+      "name": "Didbha",
+      "email": "D@gmail.com",
+      "phone": "7899638527",
+      "isActive": true
+    }
+  ]
+}
