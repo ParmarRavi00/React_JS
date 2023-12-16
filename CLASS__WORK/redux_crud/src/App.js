@@ -1,21 +1,21 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "../node_modules/bootstrap/dist/css/bootstrap.css"
 import Home from './Home';
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import CreateUser from './CreateUser';
+import EditUser from './EditUser';
 
 function App() {
   return (
     <div className="App">
-
-      <h1>React Redux CRUD</h1>
-
       <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Home />}></Route>
-        </Routes>
+      <Routes>
+        <Route path='/' element={<Home/>}></Route>
+        <Route path='/create' element={<CreateUser/>}></Route>
+        <Route path='/edit/:userid' element={<EditUser/>}></Route>
+      </Routes>
+      
       </BrowserRouter>
-
     </div>
   );
 }
