@@ -7,17 +7,19 @@ import { updateUsers } from './UserReducer';
 function EditUser() {
 
     const dispatch = useDispatch();
-    const { userid } = useParams();
+    const { userid } = useParams(); 
     const navigate = useNavigate();
 
     const users = useSelector(state => state.users);
-    console.log(users)
+    // console.log(userid)
 
     const exisitingUser =
         users.filter((user) => (
             user.id == userid
 
         ))
+
+    // console.log(exisitingUser);
 
     const { name, email } = exisitingUser[0];
 
