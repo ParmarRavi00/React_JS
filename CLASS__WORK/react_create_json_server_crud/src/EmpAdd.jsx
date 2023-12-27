@@ -17,7 +17,7 @@ function EmpAdd() {
 
         const EmpData = { id, name, email, phone, isActive }
 
-        fetch("http://localhost:8000/employee", {
+        fetch("http://localhost:3000/employee", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(EmpData)

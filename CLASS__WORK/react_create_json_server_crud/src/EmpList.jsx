@@ -10,7 +10,7 @@ function EmpList() {
     const ChangePage = useNavigate();
 
     useEffect(() => {
-        fetch("http://localhost:8000/employee")
+        fetch("http://localhost:3000/employee")
             .then((res) => res.json())
             .then((data) => SetFinalEmpData(data))
             .catch((error) => console.error("Error fetching employee data:", error));
@@ -28,7 +28,7 @@ function EmpList() {
 
         if (window.confirm("Are You Sure...?")) {
 
-            fetch("http://localhost:8000/employee/" + id, {
+            fetch("http://localhost:3000/employee/" + id, {
                 method: "DELETE",
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify(FinalEmpData)

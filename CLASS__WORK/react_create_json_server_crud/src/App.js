@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
 
-      <h1 className='bg-primary'>React JASON-Server CRUD</h1>
+      <h1 className='bg-primary'>React JSON-Server CRUD</h1>
 
       <BrowserRouter>
 
