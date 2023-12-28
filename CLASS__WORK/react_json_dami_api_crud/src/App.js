@@ -7,21 +7,19 @@ import Modal from 'react-bootstrap/Modal';
 
 function App() {
   const [user, SetUser] = useState([]);
-  const [show, setShow] = useState(false);
-  const [name, SetName] = useState("");
-  const [email, SetEmail] = useState("");
-  const [phone, SetPhone] = useState("");
-  const [Editshow, setEditShow] = useState(false);
-  const [EditId, SetEditId] = useState("");
-  const [Editname, SetEditName] = useState("");
-  const [Editemail, SetEditEmail] = useState("");
-  const [Editphone, SetEditPhone] = useState("");
+
+  const [uname, SetuName] = useState("");
+  const [uemail, SetuEmail] = useState("");
+  const [uphone, SetuPhone] = useState("");
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then((res) => res.json())
       .then((data) => SetUser(data));
   }, []);
+
+
+  const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -31,9 +29,9 @@ function App() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        name: name,
-        email: email,
-        phone: phone
+        name: uname,
+        email: uemail,
+        phone: uphone
       })
     })
       .then((res) => res.json())
@@ -42,17 +40,17 @@ function App() {
           ...user,
           {
             id: user.length + 1,
-            name: name,
-            email: email,
-            phone: phone
+            name: uname,
+            email: uemail,
+            phone: uphone
           }
         ])
       );
 
     setShow(false);
-    SetName("");
-    SetEmail("");
-    SetPhone("");
+    SetuName("");
+    SetuEmail("");
+    SetuPhone("");
   };
 
   const handleDelete = (id) => {
@@ -60,6 +58,13 @@ function App() {
     SetUser(user.filter((el) => el.id !== id));
   };
 
+
+  const [EditId, SetEditId] = useState("");
+  const [Editname, SetEditName] = useState("");
+  const [Editemail, SetEditEmail] = useState("");
+  const [Editphone, SetEditPhone] = useState("");
+
+  const [Editshow, setEditShow] = useState(false);
   const handleEditClose = () => setEditShow(false);
 
   const handleEditShow = (id, name, email, phone) => {
@@ -138,8 +143,8 @@ function App() {
                 type="text"
                 placeholder="xyz"
                 autoFocus
-                value={name}
-                onChange={(e) => SetName(e.target.value)}
+                value={uname}
+                onChange={(e) => SetuName(e.target.value)}
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
@@ -147,8 +152,8 @@ function App() {
               <Form.Control
                 type="email"
                 placeholder="name@example.com"
-                value={email}
-                onChange={(e) => SetEmail(e.target.value)}
+                value={uemail}
+                onChange={(e) => SetuEmail(e.target.value)}
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput3">
@@ -156,8 +161,8 @@ function App() {
               <Form.Control
                 type="tel"
                 placeholder="+91-1234567890"
-                value={phone}
-                onChange={(e) => SetPhone(e.target.value)}
+                value={uphone}
+                onChange={(e) => SetuPhone(e.target.value)}
               />
             </Form.Group>
           </Form>
