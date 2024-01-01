@@ -8,6 +8,8 @@ import Modal from 'react-bootstrap/Modal';
 function App() {
   const [user, SetUser] = useState([]);
 
+  // States for Add Data
+
   const [uname, SetuName] = useState("");
   const [uemail, SetuEmail] = useState("");
   const [uphone, SetuPhone] = useState("");
@@ -18,6 +20,7 @@ function App() {
       .then((data) => SetUser(data));
   }, []);
 
+  // Model for Add Data
 
   const [show, setShow] = useState(false);
 
@@ -58,14 +61,18 @@ function App() {
     SetUser(user.filter((el) => el.id !== id));
   };
 
+  // States for Edit Data
 
   const [EditId, SetEditId] = useState("");
   const [Editname, SetEditName] = useState("");
   const [Editemail, SetEditEmail] = useState("");
   const [Editphone, SetEditPhone] = useState("");
 
+  // Model for Edit Data
+
   const [Editshow, setEditShow] = useState(false);
   const handleEditClose = () => setEditShow(false);
+
 
   const handleEditShow = (id, name, email, phone) => {
     setEditShow(true);
@@ -74,6 +81,8 @@ function App() {
     SetEditEmail(email);
     SetEditPhone(phone);
   };
+
+  // Function for Edited Data to Save
 
   const handleEditSave = () => {
     SetUser(
