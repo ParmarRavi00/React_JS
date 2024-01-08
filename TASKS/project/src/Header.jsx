@@ -49,57 +49,29 @@ function Header() {
                                 <Link to={'/products'} className="nav-item nav-link">
                                     Products
                                 </Link>
-                                <a href="product-detail.html" className="nav-item nav-link">
+                                <Link to={'/productList'} className="nav-item nav-link">
                                     Product Detail
-                                </a>
-                                <a href="cart.html" className="nav-item nav-link">
-                                    Cart
-                                </a>
-                                <a href="checkout.html" className="nav-item nav-link">
+                                </Link>
+                                <Link to={'/checkout'} className="nav-item nav-link">
                                     Checkout
-                                </a>
-                                <a href="my-account.html" className="nav-item nav-link">
+                                </Link>
+                                <Link to={'/myaccount'} className="nav-item nav-link">
                                     My Account
-                                </a>
-                                <div className="nav-item dropdown">
-                                    <a
-                                        href="#"
-                                        className="nav-link dropdown-toggle"
-                                        data-toggle="dropdown"
-                                    >
-                                        More Pages
-                                    </a>
-                                    <div className="dropdown-menu">
-                                        <a href="wishlist.html" className="dropdown-item">
-                                            Wishlist
-                                        </a>
-                                        <a href="login.html" className="dropdown-item">
-                                            Login &amp; Register
-                                        </a>
-                                        <a href="contact.html" className="dropdown-item">
-                                            Contact Us
-                                        </a>
-                                    </div>
-                                </div>
+                                </Link>
+                                <Link to={'/contact'} className="nav-item nav-link">
+                                    Contact Us
+                                </Link>
+
                             </div>
                             <div className="navbar-nav ml-auto">
-                                <div className="nav-item dropdown">
-                                    <a
-                                        href="#"
-                                        className="nav-link dropdown-toggle"
-                                        data-toggle="dropdown"
-                                    >
-                                        User Account
-                                    </a>
-                                    <div className="dropdown-menu">
-                                        <a href="#" className="dropdown-item">
-                                            Login
-                                        </a>
-                                        <a href="#" className="dropdown-item">
-                                            Register
-                                        </a>
-                                    </div>
-                                </div>
+
+                                <Link to={'login'} className="dropdown-item">
+                                    Login
+                                </Link>
+                                <Link to={'register'} className="dropdown-item">
+                                    Register
+                                </Link>
+
                             </div>
                         </div>
                     </nav>
@@ -129,14 +101,15 @@ function Header() {
                         </div>
                         <div className="col-md-3">
                             <div className="user">
-                                <a href="wishlist.html" className="btn wishlist">
+                                <Link to={'/whishlist'} className="btn wishlist">
                                     <i className="fa fa-heart" />
+
                                     <span>(0)</span>
-                                </a>
-                                <a href="cart.html" className="btn cart">
+                                </Link>
+                                <Link to={'/cart'} className="btn cart">
                                     <i className="fa fa-shopping-cart" />
                                     <span>(0)</span>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

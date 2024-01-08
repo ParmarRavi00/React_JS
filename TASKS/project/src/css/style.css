@@ -362,8 +362,8 @@ h2 {
     margin-right: 15px;
 }
 
-.bottom-bar .user .cart i,
-.bottom-bar .user .wishlist i {
+.bottom-bar .user .cart Link,
+.bottom-bar .user .wishlist Link {
     color: #FF6F61;
 }
 
@@ -373,8 +373,8 @@ h2 {
     font-size: 15px;
 }
 
-.bottom-bar .user .cart:hover i,
-.bottom-bar .user .wishlist:hover i,
+.bottom-bar .user .cart:hover Link,
+.bottom-bar .user .wishlist:hover Link,
 .bottom-bar .user .cart:hover span,
 .bottom-bar .user .wishlist:hover span {
     color: #ffffff;
