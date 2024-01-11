@@ -1,4 +1,8 @@
 import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 function Home() {
     return (
@@ -62,8 +66,21 @@ function Home() {
                             </nav>
                         </div>
                         <div className="col-md-6">
-                            <div className="header-slider normal-slider">
-                                <div className="header-slider-item">
+                            <Swiper
+                                spaceBetween={30}
+                                centeredSlides={true}
+                                autoplay={{
+                                    delay: 2500,
+                                    disableOnInteraction: false,
+                                }}
+                                pagination={{
+                                    clickable: true,
+                                }}
+                                navigation={true}
+                                modules={[Autoplay, Pagination, Navigation]}
+                                className="mySwiper"
+                            >
+                                <SwiperSlide><div className="header-slider-item">
                                     <img src="img/slider-1.jpg" alt="Slider Image" />
                                     <div className="header-slider-caption">
                                         <p>Some text goes here that describes the image</p>
@@ -72,8 +89,8 @@ function Home() {
                                             Shop Now
                                         </a>
                                     </div>
-                                </div>
-                                <div className="header-slider-item">
+                                </div></SwiperSlide>
+                                <SwiperSlide><div className="header-slider-item">
                                     <img src="img/slider-2.jpg" alt="Slider Image" />
                                     <div className="header-slider-caption">
                                         <p>Some text goes here that describes the image</p>
@@ -82,8 +99,8 @@ function Home() {
                                             Shop Now
                                         </a>
                                     </div>
-                                </div>
-                                <div className="header-slider-item">
+                                </div></SwiperSlide>
+                                <SwiperSlide><div className="header-slider-item">
                                     <img src="img/slider-3.jpg" alt="Slider Image" />
                                     <div className="header-slider-caption">
                                         <p>Some text goes here that describes the image</p>
@@ -92,8 +109,9 @@ function Home() {
                                             Shop Now
                                         </a>
                                     </div>
-                                </div>
-                            </div>
+                                </div></SwiperSlide>
+                            </Swiper>
+
                         </div>
                         <div className="col-md-3">
                             <div className="header-img">

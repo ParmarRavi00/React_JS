@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function Checkout() {
     return (
@@ -36,7 +36,7 @@ function Checkout() {
                                             />
                                         </div>
                                         <div className="col-md-6">
-                                            <label>Last Name"</label>
+                                            <label>Last Name</label>
                                             <input
                                                 className="form-control"
                                                 type="text"
@@ -70,7 +70,7 @@ function Checkout() {
                                         <div className="col-md-6">
                                             <label>Country</label>
                                             <select className="custom-select">
-                                                <option selected="">United States</option>
+                                                <option selected>United States</option>
                                                 <option>Afghanistan</option>
                                                 <option>Albania</option>
                                                 <option>Algeria</option>
@@ -123,7 +123,7 @@ function Checkout() {
                                                     id="shipto"
                                                 />
                                                 <label className="custom-control-label" htmlFor="shipto">
-                                                    Ship to different address
+                                                    Ship to a different address
                                                 </label>
                                             </div>
                                         </div>
@@ -141,7 +141,7 @@ function Checkout() {
                                             />
                                         </div>
                                         <div className="col-md-6">
-                                            <label>Last Name"</label>
+                                            <label>Last Name</label>
                                             <input
                                                 className="form-control"
                                                 type="text"
@@ -175,7 +175,7 @@ function Checkout() {
                                         <div className="col-md-6">
                                             <label>Country</label>
                                             <select className="custom-select">
-                                                <option selected="">United States</option>
+                                                <option selected>United States</option>
                                                 <option>Afghanistan</option>
                                                 <option>Albania</option>
                                                 <option>Algeria</option>
@@ -341,8 +341,7 @@ function Checkout() {
             </div>
             {/* Checkout End */}
         </>
-
-    )
+    );
 }
 
 export default Checkout;
